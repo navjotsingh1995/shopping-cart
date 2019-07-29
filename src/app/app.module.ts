@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
@@ -18,6 +18,7 @@ import { AdminProductsComponent } from './component/admin/admin-products/admin-p
 import { AdminOrdersComponent } from './component/admin/admin-orders/admin-orders.component';
 import { LoginComponent } from './component/login/login.component';
 import { ProductFormComponent } from './component/admin/product-form/product-form.component';
+import {CustomFormsModule} from 'ng2-validation'
 
 @NgModule({
   declarations: [
@@ -39,7 +40,10 @@ import { ProductFormComponent } from './component/admin/product-form/product-for
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CustomFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
