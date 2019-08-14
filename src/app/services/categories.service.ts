@@ -11,15 +11,7 @@ export class CategoriesService {
   constructor(private db:AngularFireDatabase) { }
 
   getCategories(){
-    return this.db.list('/categories',ref=>ref.orderByChild('name'))
-    // .snapshotChanges().pipe(map(res=>{
-    //         res.forEach(res=>{
-    //           this.category=res.key
-              
-    //         })
-            
-            
-    // }));
+    return this.db.list('/categories',ref=>ref.orderByChild('name')).valueChanges();
   }
 
 
