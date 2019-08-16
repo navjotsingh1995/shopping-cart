@@ -18,6 +18,8 @@ id;
   constructor(private categoryService: CategoriesService,private productService:ProductService,private router:Router,private route: ActivatedRoute) {
    this.categories$=this.categoryService.getCategories();
     this.id=this.route.snapshot.paramMap.get('id');
+    console.log(this.id);
+    
     
     if(this.id){
       this.productService.get(this.id).snapshotChanges().pipe(take(1)).subscribe(p=>{

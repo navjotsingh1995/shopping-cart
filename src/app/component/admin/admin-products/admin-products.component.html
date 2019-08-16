@@ -1,8 +1,8 @@
 <p>
-    <a routerLink="/admin/products/new" class="btn btn-primary">New Product</a>
+    <a routerLink="/admin/products/new/product" class="btn btn-primary">New Product</a>
 </p>
 <p>
-    <input type="text" (keyup)="filter(query.value)" class="form-control" placeholder="Search for product.......">
+    <input type="search" (keyup)="filter(query)" [(ngModel)]="query" class="form-control" placeholder="Search for product.......">
 </p>
 
 
@@ -15,9 +15,9 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let p of products$">
+        <tr *ngFor="let p of filteredProducts">
             <td>{{p.title}}</td>
-            <td>{{p.price}}</td>
+            <td>Rs.{{p.price}}</td>
             <td>
                 <a [routerLink]="['/admin/products/',p.key]">Edit</a>
             </td>

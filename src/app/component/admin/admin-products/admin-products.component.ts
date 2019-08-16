@@ -8,8 +8,9 @@ import { Component, OnInit } from "@angular/core";
 })
 export class AdminProductsComponent implements OnInit {
   products$:any=[];
-products:{title:String}[];
  key: any;
+ filteredProducts: any[];
+ query:any;
 
   constructor(private productService: ProductService) {
  
@@ -19,8 +20,8 @@ products:{title:String}[];
               let obj= {
                 key: element.key,...element.payload.val()
               }
-              this.products$.push(obj);      
-      
+             this.products$.push(obj);  
+            this.filteredProducts =this.products$;
     });
   })
       
@@ -28,9 +29,8 @@ products:{title:String}[];
 
   ngOnInit() {}
 
-  filter(query:string){
-
+  filter(query:any){
     
-
+    this.filteredProducts= query ? this.products$.filter((p:any)=>(p.title).toLowerCase().includes(query.toLowerCase())) : this.products$;
   }
 }
