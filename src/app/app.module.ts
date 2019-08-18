@@ -18,7 +18,10 @@ import { AdminProductsComponent } from './component/admin/admin-products/admin-p
 import { AdminOrdersComponent } from './component/admin/admin-orders/admin-orders.component';
 import { LoginComponent } from './component/login/login.component';
 import { ProductFormComponent } from './component/admin/product-form/product-form.component';
-import {CustomFormsModule} from 'ng2-validation'
+import {CustomFormsModule} from 'ng2-validation';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import {CustomFormsModule} from 'ng2-validation'
     AngularFireAuthModule,
     FormsModule,
     ReactiveFormsModule,
-    CustomFormsModule
+    CustomFormsModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

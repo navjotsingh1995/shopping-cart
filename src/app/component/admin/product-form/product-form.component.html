@@ -4,7 +4,7 @@
       <form #f="ngForm" (ngSubmit)="save(f.value)">
           <div class="form-group">
             <label for="title">Title</label>
-            <input #title="ngModel" [(ngModel)]="product.title" name="title" type="text" class="form-control" required>
+            <input [(ngModel)]="product.title" #title="ngModel" name="title" type="text" class="form-control" required>
             <div class="alert alert-danger" *ngIf="title.touched && title.invalid">Title is required</div>
           </div>
 
@@ -48,7 +48,7 @@
 
   <div class="col-md-6">
 
-      <div class="card" style="width: 18rem;">
+      <div *ngIf="product.title" class="card" style="width: 18rem;">
           <img class="card-img-top" [src]="product.imageUrl" *ngIf="product.imageUrl">
           <div class="card-body">
             <h5 class="card-title">{{product.title}}</h5>

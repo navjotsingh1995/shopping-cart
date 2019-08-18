@@ -1,21 +1,26 @@
 <p>
     <a routerLink="/admin/products/new/product" class="btn btn-primary">New Product</a>
 </p>
-<p>
+<!-- <p>
     <input type="search" (keyup)="filter(query)" [(ngModel)]="query" class="form-control" placeholder="Search for product.......">
-</p>
+</p> -->
+<div class="search-hero">
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for Product....">
+</div>
 
 
-<table class="table">
+<table class="table table-striped">
     <thead>
         <tr>
+
             <th>Title</th>
             <th>Price</th>
             <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let p of filteredProducts">
+        <tr *ngFor="let p of filteredProducts | paginate: { itemsPerPage: itemsPerPage, currentPage: p} | filter:searchText">
+
             <td>{{p.title}}</td>
             <td>Rs.{{p.price}}</td>
             <td>
@@ -23,5 +28,32 @@
             </td>
         </tr>
     </tbody>
+
 </table>
+<div class="col-sm-12">
+<div class="row">
+    <div class="col-sm-4 text-left">
+      Result: {{p}} - {{itemsPerPage}} /  {{countId}}
+    </div>
+    <div class="col-sm-4 text-center">
+
+      <div class="input-group-prepend">
+        <span class="input-group-text">Limit:</span>
+      <input [(ngModel)]="itemsPerPage" type="number" class="text-center input_width">
+    </div>
+      </div>
+
+      <div class="col-sm-4">
+        <!-- <div class="input-group-append text-center">
+        <span>Jump To:</span>&nbsp;
+        <input [(ngModel)]="p" type="number" class="text-center input_width_">
+            <span class="input-group-text">/{{p}}</span>
+    </div> -->
+      </div>
+    </div>
+  </div>
+<br/>
+<div class="col-lg-12 text-center">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
 
