@@ -15,6 +15,7 @@ export class AdminProductsComponent implements OnInit {
  countId:number=0;
  itemsPerPage:number=5;
  searchText;
+ noOfPages:number;
   constructor(private productService: ProductService) {
 
 
@@ -27,8 +28,9 @@ export class AdminProductsComponent implements OnInit {
              this.products$.push(obj);
             this.filteredProducts =this.products$;
             this.countId= this.filteredProducts.length;
+            
     });
-
+    // this.noOfPages=Math.round(this.countId/this.itemsPerPage)
   })
 
   }

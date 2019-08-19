@@ -15,7 +15,7 @@ import { ProductFormComponent } from './component/admin/product-form/product-for
 
 const routes: Routes = [
 
-  {path:'',component: HomeComponent},
+  {path:'',component: ProductsComponent},
   {path:'products',component: ProductsComponent},
   {path:'shopping-cart',component: ShoppingCartComponent},
   {path:'login',component: LoginComponent},

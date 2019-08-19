@@ -23,6 +23,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +50,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     ReactiveFormsModule,
     CustomFormsModule,
     NgxPaginationModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
 
   ],
   providers: [],

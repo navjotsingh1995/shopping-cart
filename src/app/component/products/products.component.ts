@@ -1,3 +1,4 @@
+import { ProductService } from './../../services/product/product.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
+  products$:any=[];
 
-  constructor() { }
+  constructor(productService:ProductService) {
+
+    productService.getAll().snapshotChanges().subscribe(res=> {
+      res.forEach((element)=>{
+  
+                let obj= {
+                  key: element.key,...element.payload.val()
+                }
+               this.products$.push(obj);             
+      });
+      
+    });
+   }
 
   ngOnInit() {
   }
