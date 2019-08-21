@@ -30,7 +30,7 @@ export class AdminProductsComponent implements OnInit {
             this.countId= this.filteredProducts.length;
             
     });
-    // this.noOfPages=Math.round(this.countId/this.itemsPerPage)
+    
   })
 
   }
