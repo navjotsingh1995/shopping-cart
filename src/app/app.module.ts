@@ -21,6 +21,7 @@ import { ProductFormComponent } from './component/admin/product-form/product-for
 import {CustomFormsModule} from 'ng2-validation';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 
 
 
@@ -38,7 +39,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     AdminProductsComponent,
     AdminOrdersComponent,
     LoginComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    ProductFilterComponent
   ],
   imports: [
     BrowserModule,

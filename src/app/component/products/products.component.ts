@@ -3,7 +3,6 @@ import { Product } from './../../models/product';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from './../../services/product/product.service';
 import { Component, OnInit } from '@angular/core';
-import { CategoriesService } from 'src/app/services/categories.service';
 
 
 @Component({
@@ -13,11 +12,10 @@ import { CategoriesService } from 'src/app/services/categories.service';
 })
 export class ProductsComponent implements OnInit {
   products$:any=[];
-  categories$;
   category:string;
   filteredProduct: Product[]=[]
 
-  constructor(productService:ProductService,categoryService:CategoriesService,route:ActivatedRoute) {
+  constructor(productService:ProductService,route:ActivatedRoute) {
 
     productService.getAll().snapshotChanges().pipe(switchMap(res=> {
       res.forEach((element)=>{
@@ -32,8 +30,6 @@ export class ProductsComponent implements OnInit {
       this.category= params.get('category');
       this.filteredProduct= (this.category) ? this.products$.filter(p=>p.category=== this.category): this.products$; 
      })
-    this.categories$= categoryService.getCategories();
- 
    }
 
   ngOnInit() {
