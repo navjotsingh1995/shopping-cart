@@ -8,6 +8,7 @@ import { take} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ShoppingCartService {
+  data: any;
 
   constructor(private db: AngularFireDatabase) { }
 
@@ -31,12 +32,10 @@ private async getOrCreateCartId(){
 
 async addToCart(product: Product){
   let cartId= await this.getOrCreateCartId();
-let data= product.price;
-  let item$ = this.db.object('/shopping-carts/' + cartId + '/items/' + data);
-    item$.snapshotChanges().pipe(take(1)).subscribe(item=>{
-        if(item){
-               item$.update({quantity:item.payload.key + 1})
-              // console.log(obj,"888888888")
+  let item$ = this.db.object('/shopping-carts/' + cartId   + '/items/' + product.key);
+  item$.snapshotChanges().pipe(take(1)).subscribe((item:any)=>{
+    if(item.payload.exists()){
+     this.data= item$.update({quantity:item.payload.toJSON().quantity + 1})
         }else{
           item$.set({product:product,quantity:1});
         }
