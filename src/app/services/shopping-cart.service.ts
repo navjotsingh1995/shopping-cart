@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class ShoppingCartService {
   data: number | Promise<void>;
+  shoppingCartItemCount: number;
 
   constructor(private db: AngularFireDatabase) { }
 
@@ -19,9 +20,9 @@ export class ShoppingCartService {
     })
   }
 
- async getCart():Promise<Observable<ShoppingCart>>{
+ async getCart():Promise<AngularFireObject<ShoppingCart>>{
    let cartId= await this.getOrCreateCartId();
-    return this.db.object('/shopping-carts/' + cartId).valueChanges().pipe(map(x=>new ShoppingCart(x.items)));
+    return this.db.object('/shopping-carts/' + cartId);
   }
 
   private getItem(cartId:any,productId:string){
@@ -55,5 +56,6 @@ private async updateItemQuantity(product:Product,change:number){
 
     })
 }
+
 
 }
