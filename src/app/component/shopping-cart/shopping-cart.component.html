@@ -9,14 +9,14 @@
       <tr>
           <th>Product</th>
           <th>Quantity</th>
-          <th></th>
+          <th>Price</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+      <tr *ngFor="let carts of cartKey">
+        <td>{{carts.product.title}}</td>
+        <td>{{carts.quantity}}</td>
+        <td>{{carts.product.price * carts.quantity}}</td>
       </tr>
     </tbody>
   </table>
