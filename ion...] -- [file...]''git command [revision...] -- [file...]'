@@ -1,0 +1,133 @@
+[33mcommit a8ad77836f0a01b840be5ce52e65075cbecebb73[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;32mdemoshop[m[33m)[m
+Author: Navjot <navjotsingh1795@gmail.com>
+Date:   Wed Jan 1 08:54:12 2020 +0530
+
+    shopping-cart-service
+
+[33mcommit 50eaf3dd091e0f2981b5bf716c51387be546bd85[m
+Author: Navjot <navjotsingh1795@gmail.com>
+Date:   Wed Aug 28 00:21:33 2019 +0530
+
+    error in shoppping service
+
+[33mcommit 84527970f227c3467ce203802a0bd56e8ac4b5f0[m
+Author: Navjot Singh <Navjot.Singh@srmtechsol.com>
+Date:   Tue Aug 27 20:03:22 2019 +0530
+
+    display card
+
+[33mcommit 9100ac21e7c8a2bec1831e2be4c4844cbcbb0b71[m
+Merge: b9ea1cd 13d3756
+Author: Navjot <navjotsingh1795@gmail.com>
+Date:   Mon Aug 26 23:54:37 2019 +0530
+
+    shopping cart
+
+[33mcommit b9ea1cd3c0f7d021818cd2c839efaf48fc0555c2[m
+Author: Navjot <navjotsingh1795@gmail.com>
+Date:   Mon Aug 26 20:47:15 2019 +0530
+
+    shopping services
+
+[33mcommit 13d375622ee7887301ad8a6731445aa5267c3bfe[m
+Author: Navjot Singh <Navjot.Singh@srmtechsol.com>
+Date:   Mon Aug 26 20:03:33 2019 +0530
+
+    service
+
+[33mcommit e2ca1a4c2bf98dce1fb5b8ad769a71d3a8445071[m
+Author: Navjot <navjotsingh1795@gmail.com>
+Date:   Sun Aug 25 00:58:43 2019 +0530
+
+    shopping cart
+
+[33mcommit e192c14c6d941e714c730c63f848d0809c618ada[m
+Author: Navjot Singh <Navjot.Singh@srmtechsol.com>
+Date:   Fri Aug 23 19:03:51 2019 +0530
+
+    extracting component filter
+
+[33mcommit aec0c02deca6f387c5d33973c09d8cf086947d40[m
+Author: Navjot Singh <Navjot.Singh@srmtechsol.com>
+Date:   Wed Aug 21 19:13:57 2019 +0530
+
+    product display
+
+[33mcommit 4f259cd315b3beb2b93e6834939762e11ef230e5[m
+Author: Navjot Singh <Navjot.Singh@srmtechsol.com>
+Date:   Mon Aug 19 20:01:37 2019 +0530
+
+     card
+
+[33mcommit c1b60f04ec6057866bf09de648a1eed11fa5947e[m
+Author: Navjot <navjotsingh1795@gmail.com>
+Date:   Sun Aug 18 20:06:50 2019 +0530
+
+    data table
+
+[33mcommit fffead3c18c703c5b409306fda247cee47c89fb2[m
+Author: Navjot Singh <Navjot.Singh@srmtechsol.com>
+Date:   Fri Aug 16 18:58:54 2019 +0530
+
+    filter data
+
+[33mcommit 69a38d4d8811a1878567085243fd8c33e239a9a8[m
+Author: Navjot Singh <Navjot.Singh@srmtechsol.com>
+Date:   Wed Aug 14 19:03:43 2019 +0530
+
+    edit product
+
+[33mcommit 91941697a919170eac4f7d4f9d16f5bcb00f3cfb[m
+Author: Navjot Singh <Navjot.Singh@srmtechsol.com>
+Date:   Thu Aug 1 19:04:41 2019 +0530
+
+    bug fix
+
+[33mcommit 83f5befe5834724823943bf559cdd6b520648296[m
+Author: Navjot Singh <Navjot.Singh@srmtechsol.com>
+Date:   Tue Jul 30 18:59:27 2019 +0530
+
+    edit products
+
+[33mcommit 77c417350c8c0129def1af0b3b71b7658922270f[m
+Merge: e1ffd09 505c797
+Author: Navjot <navjotsingh1795@gmail.com>
+Date:   Tue Jul 30 00:09:00 2019 +0530
+
+    custom validation
+
+[33mcommit e1ffd09a00c412b5620fbf116b673c6ba2b87d0f[m
+Author: Navjot <navjotsingh1795@gmail.com>
+Date:   Mon Jul 29 22:49:33 2019 +0530
+
+    bug fix
+
+[33mcommit 505c797c495631be1ba0721b49918d600175d8ea[m
+Author: Navjot Singh <Navjot.Singh@srmtechsol.com>
+Date:   Mon Jul 29 19:45:25 2019 +0530
+
+    validation
+
+[33mcommit 6a8c831a695e16efab0b8630483266d158b6f80a[m
+Author: Navjot <navjotsingh1795@gmail.com>
+Date:   Sun Jul 28 20:48:49 2019 +0530
+
+    manage fields
+
+[33mcommit 9309060ab33739afa015a2fb808cfaaf9dfe4779[m
+Author: Navjot Singh <Navjot.Singh@srmtechsol.com>
+Date:   Fri Jul 26 17:46:50 2019 +0530
+
+    authentication
+
+[33mcommit 5f8cf86c374720daf2807a3786a1af30df8a5e97[m
+Author: Navjot Singh <Navjot.Singh@srmtechsol.com>
+Date:   Thu Jul 25 19:53:43 2019 +0530
+
+    initial commit under construction
+
+[33mcommit 54a328ae60554c03a6c834a8cd0823d36886e0ab[m
+Author: Navjot Singh <Navjot.Singh@srmtechsol.com>
+Date:   Wed Jul 24 16:27:58 2019 +0530
+
+    initial commit
