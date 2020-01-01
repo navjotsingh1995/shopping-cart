@@ -19,10 +19,10 @@ export class ShoppingCartService {
     })
   }
 
- async getCart():Promise<Observable<ShoppingCart>>{
-   let cartId= await this.getOrCreateCartId();
-    return this.db.object('/shopping-carts/' + cartId).valueChanges().pipe(map(x=>new ShoppingCart(x.items)));
-  }
+//  async getCart():Promise<Observable<ShoppingCart>>{
+//    let cartId= await this.getOrCreateCartId();
+//     // return this.db.object('/shopping-carts/' + cartId).valueChanges().pipe(map(x=>new ShoppingCart(x.items)));
+//   }
 
   private getItem(cartId:any,productId:string){
     return this.db.object('/shopping-carts/' + cartId   + '/items/' + productId);
