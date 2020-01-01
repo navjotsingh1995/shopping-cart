@@ -4,6 +4,10 @@ export class ShoppingCart{
   constructor(public items: ShoppingCartItem[]){
   }
 
+  get productIds(){
+    return Object.keys(this.items);
+  }
+
   get totalItemCount(){
     let count=0;
     for(let productId in this.items){
@@ -11,4 +15,7 @@ export class ShoppingCart{
       return count;
     }
   }
+      totalPrice(){
+        
+      }
 }

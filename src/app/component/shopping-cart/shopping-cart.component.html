@@ -1,3 +1,23 @@
-<p>
-  shopping-cart
-</p>
+<h1>Shopping Cart</h1>
+<ng-container *ngIf="cart$">
+
+  <p>
+    You have {{shoppingCartItemCount}} items in your shopping cart.
+  </p>
+  <table class="table">
+    <thead>
+      <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let carts of cartKey">
+        <td>{{carts.product.title}}</td>
+        <td>{{carts.quantity}}</td>
+        <td>{{carts.product.price * carts.quantity}}</td>
+      </tr>
+    </tbody>
+  </table>
+</ng-container>

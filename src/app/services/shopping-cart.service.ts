@@ -1,6 +1,6 @@
+import { Product } from './../models/product';
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
-import { Product } from '../models/product';
 import { take, map} from 'rxjs/operators';
 import { ShoppingCart } from '../models/shopping-cart';
 import { Observable } from 'rxjs';
@@ -10,8 +10,11 @@ import { Observable } from 'rxjs';
 })
 export class ShoppingCartService {
   data: number | Promise<void>;
+  shoppingCartItemCount: number;
 
-  constructor(private db: AngularFireDatabase) { }
+  constructor(private db: AngularFireDatabase) {
+
+   }
 
  private create(){
     return this.db.list('/shopping-carts').push({
@@ -19,10 +22,10 @@ export class ShoppingCartService {
     })
   }
 
-//  async getCart():Promise<Observable<ShoppingCart>>{
-//    let cartId= await this.getOrCreateCartId();
-//     // return this.db.object('/shopping-carts/' + cartId).valueChanges().pipe(map(x=>new ShoppingCart(x.items)));
-//   }
+ async getCart():Promise<AngularFireObject<ShoppingCart>>{
+   let cartId= await this.getOrCreateCartId();
+    return this.db.object('/shopping-carts/' + cartId);
+  }
 
   private getItem(cartId:any,productId:string){
     return this.db.object('/shopping-carts/' + cartId   + '/items/' + productId);
@@ -55,5 +58,7 @@ private async updateItemQuantity(product:Product,change:number){
 
     })
 }
+
+
 
 }
